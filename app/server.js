@@ -141,6 +141,15 @@ app.get(['/:name','/:dir/:name'], function (req, res, next) {
 				, userlevel : req.session.userlevel
 				, appName : appName
 				, path : '/' + dirName + '/' + req.params.name
+			}, function(err, html){
+				
+				if (err) {
+					res.writeHead(404);
+					res.end('404: Not Found', 'UTF-8');
+				} else {
+					res.send(html);
+				}
+
 			});
 
 		} else if (fileNameSplit.length > 1 && fileNameSplit[1] === "html") {
