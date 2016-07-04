@@ -31,3 +31,7 @@ The "admin" user is created if it doesn't exist. Set the details in:
     ...
     var adminUsername = "admin";
     var adminPassword = "password";
+    
+# FORKS
+
+meansilo with Facebook login and user registration - https://github.com/nikolayhsu/meansilo @nikolayhsu
